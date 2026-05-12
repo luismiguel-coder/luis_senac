@@ -1,0 +1,19 @@
+# Porta 8021 precisa de : e porta depois o /
+http://localhost:8021/luis/
+
+# explicação :  "\.(env|json)$"  todo arquivo .env ou .json é bloqueado
+
+# Bloqueia varios:
+<FilesMatch "\.(env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Bloqueia um especifico:
+<Files "file.json"> 
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Bloqueio rigido:
+RewriteRule "(^|/)\." - [F]

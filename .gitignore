@@ -1,0 +1,22 @@
+
+.env
+*.env
+!.env.example          # .env.example pode subir (é o modelo sem dados reais)
+
+
+*.code-workspace        # configuração pessoal do VS Code
+.vscode/
+.idea/
+
+.DS_Store               # Mac
+Thumbs.db               # Windows
+desktop.ini
+
+configuração.json
+file.json
+"como acessar"
+
+
+*.db
+*.sqlite
+*.sql

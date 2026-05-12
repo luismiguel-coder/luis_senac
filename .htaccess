@@ -1,0 +1,22 @@
+RewriteEngine On
+Options All -Indexes
+
+# ── BLOQUEIA ACESSO DIRETO AO .env ───────────────────────────────────────────
+<FilesMatch "\.(env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ── BLOQUEIA ARQUIVOS SENSÍVEIS ───────────────────────────────────────────────
+<Files "file.json">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "configuração.json">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# ── BLOQUEIA ARQUIVOS OCULTOS ─────────────────────────────────────────────────
+RewriteRule "(^|/)\." - [F]
