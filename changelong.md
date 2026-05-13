@@ -5,7 +5,16 @@ Feature : Login
 - Adicionei um botão na principal e na html "meu_login";
 - No "meu_login" coloquei um titulo chamado "Meu login";
 
+Remove: Raiz
 26/05/13 [0.1.0]
 ### Removed
 >> Removi o arquivo (site.html) 
 - Único arquivo removido 
+
+
+Feature:Login 
+26/05/13 [0.1.0]
+###  Added
+>> Adição do campo email
+- criei um label
+- um input email
